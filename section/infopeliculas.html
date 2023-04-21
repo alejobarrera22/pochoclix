@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=h1">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Pochoclix!</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./peliculas.html">Comprar entradas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./infopeliculas.html">Información</a>
+                    </li>
+                </ul>
+                <div class="input-group me-2 w-50 p-3">
+                    <input type="text"  id="texto_busqueda" class="form-control h-25 d-inline-block" placeholder="Ingrese una película" aria-label="Ingrese pelicula" aria-describedby="button-addon2">
+
+                    <button class="btn btn-outline-secondary h-25 d-inline-block" type="button" id="boton_buscar">Buscar</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <span id="texto_default">Ingrese en el buscador una película</span>
+        <div id="resultado_busqueda"></div>
+    </div>
+
+    <script src="../js/info.js"></script>
+</body>
+</html>
+
