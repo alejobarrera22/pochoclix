@@ -38,7 +38,7 @@ const buscarCartelera = async() =>{
                                     <h5 class="card-title">${element.title}</h5>
                                     <p class="card-text">${element.genres}</p>
                                     <p> Precio: ${precio} </p>
-                                    <button id="boton-cart-${element.id}">Agregar al carrito</button>
+                                    <button onclick='funcionarBotones(${element})' >Agregar al carrito</button>
                                 </div>
                             </div>`;
     }
@@ -48,16 +48,11 @@ const buscarCartelera = async() =>{
 
 document.addEventListener('DOMContentLoaded', buscarCartelera)
 
-//función que crea una card en el index.html por cada pelicula
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 let cart = document.querySelector('.carrito');
-function funcionarBotones(){
-    peliculas.forEach((pelicula)=> {
-        document.getElementById(`boton-cart-${pelicula.id}`).addEventListener('click', ()=>{
-            console.log(pelicula.title);
-        })
-    }
-    )
+
+function funcionarBotones(pelicula){
+    console.log(pelicula)
 }
 
 //funcion que me permite agregar una peli al carrito e ir aumentando la cantidad
@@ -79,11 +74,11 @@ function mostrarCarrito(){
     cart.innerHTML = '';
     let total = carrito.reduce((acc,ite) => acc + ite.precio * ite.cantidad, 0)
     carrito.forEach((peli) => {
-        let subTotal = peli.cantidad * peli.precio;
+        //let subTotal = peli.cantidad * peli.precio;
         cart.innerHTML += `<div class="card">
-                                <p>Película: ${peli.titulo}</p>
+                                <p>Película: ${peli.title}</p>
                                 <p>Cantidad: ${peli.cantidad}</p>
-                                <span>Subtotal: $${subTotal}</span>
+                                <span>Subtotal: $${peli.id}</span>
                             </div>`
     });
     cart.innerHTML += `<p> El total de su compra es de: $${total}</p>`
