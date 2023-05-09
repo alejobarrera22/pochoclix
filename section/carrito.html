@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=h1">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Carrito</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -30,7 +30,7 @@
                         <a class="nav-link" href="./infopeliculas.html">Información</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./carrito.html">Comprar entradas</a>
+                        <a class="nav-link" href="./section/carrito.html">Comprar entradas</a>
                     </li>
                 </ul>
                 <div class="input-group me-2 w-50 p-3">
@@ -41,12 +41,11 @@
             </div>
         </div>
     </nav>
-    <div>
-        <span id="texto_default">Ingrese en el buscador una película</span>
-        <div id="resultado_busqueda"></div>
-    </div>
+    
+    <div class="carrito"></div>
+    
+    <button class="borrar" id="borrar">Borrar carrito</button>
 
-    <script src="../js/info.js"></script>
+    <script src="../js/carrito.js"></script>
 </body>
 </html>
-

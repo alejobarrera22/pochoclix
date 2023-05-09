@@ -118,7 +118,7 @@ button{
     width: 50px;
 } 
 
-.carousel-inner{
+.carousel-item{
     height: 600px;
     display: flex;
     flex-direction: row;
@@ -126,7 +126,11 @@ button{
     justify-content: center;
 }
 
-.carousel-inner img{
+.carousel-item img{
+    width: 100vh;
+}
+
+#main-populares img{
     max-height: 600px;
 }
 
